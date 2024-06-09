@@ -22,6 +22,9 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(10000, () => {
-  console.log("Server is listening on port 10000");
+// Use environment variable for port
+const PORT = process.env.PORT || 10000;
+
+httpServer.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });
